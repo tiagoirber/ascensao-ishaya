@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Curso de Primeira Esfera da Ascensão Ishaya em Brasília, 10 a 12 de abril de 2026. Aprenda a meditar de verdade em um fim de semana.">
+<meta name="description" content="Curso de Primeira Esfera da Ascensão Ishaya em Brasília, 10 a 12 de abril de 2026.">
 <meta property="og:title" content="Meditação Ishaya – Brasília · 10 a 12 de abril de 2026">
 <meta property="og:description" content="Uma técnica simples, comprovada e sem religião. 4 técnicas práticas. Resultado desde o primeiro dia.">
 <meta property="og:type" content="website">
@@ -13,213 +13,263 @@
 :root{
   --purple:#9b8aa0;
   --purple-light:#c4b3c8;
-  --purple-pale:#ede8ef;
+  --purple-pale:#f0ebf2;
+  --purple-dark:#6b5a70;
   --gold:#c9a227;
   --gold-light:#e8c84a;
-  --cream:#f8f6f2;
-  --warm:#ede9e2;
-  --dark:#1a1a1a;
+  --cream:#f8f5f0;
+  --warm:#ede8e0;
+  --dark:#1a1714;
   --text-mid:#4a4540;
-  --text-light:#8a8480;
+  --text-light:#8a8278;
 }
+html{scroll-behavior:smooth;}
 body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--dark);-webkit-font-smoothing:antialiased;}
 
+/* ── LOGO SVG INLINE ── */
+.tbp-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.tbp-logo-text{font-family:'Helvetica Neue',Arial,sans-serif;font-size:0.7rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--purple-light);font-weight:300;}
+
 /* ── NAV ── */
-nav{background:rgba(26,26,26,0.97);padding:0.9rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:200;}
-.nav-logo{display:flex;align-items:center;gap:8px;}
-.nav-logo svg{width:24px;height:24px;}
-.nav-logo-text{font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple-light);}
-.nav-cta{padding:0.5rem 1.25rem;background:var(--gold);color:var(--dark);font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;text-decoration:none;border:none;cursor:pointer;}
+nav{background:rgba(26,23,20,0.96);padding:0.85rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(155,138,160,0.15);}
+.nav-cta{padding:0.5rem 1.4rem;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:400;text-decoration:none;transition:all 0.2s;}
+.nav-cta:hover{background:var(--gold);color:var(--dark);}
 
 /* ── HERO ── */
-.hero{min-height:95vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem 5rem;background:var(--dark);position:relative;overflow:hidden;}
-.hero-circle{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(155,138,160,0.08);top:50%;left:50%;transform:translate(-50%,-50%);}
-.urgency-badge{display:inline-block;background:rgba(201,162,39,0.15);border:1px solid var(--gold);color:var(--gold);font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;margin-bottom:1.75rem;position:relative;}
-.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1rem;position:relative;max-width:700px;}
+.hero{min-height:95vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem 6rem;background:var(--dark);position:relative;overflow:hidden;}
+.hero-sphere{position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(155,138,160,0.07);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.hero-sphere2{position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(201,162,39,0.05);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+/* Decorative sphere top-right */
+.deco-sphere{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(155,138,160,0.1);pointer-events:none;}
+.deco-sphere2{position:absolute;left:-60px;bottom:60px;width:180px;height:180px;border-radius:50%;background:rgba(201,162,39,0.06);pointer-events:none;}
+.urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.35);color:var(--gold);font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;padding:5px 16px;margin-bottom:2rem;position:relative;}
+.hero h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:400;line-height:1.05;color:#fff;margin-bottom:1.1rem;position:relative;max-width:740px;letter-spacing:-0.5px;}
 .hero h1 em{font-style:italic;color:var(--gold-light);}
-.hero-value{font-family:'Helvetica Neue',sans-serif;font-size:clamp(0.9rem,2vw,1.05rem);color:rgba(255,255,255,0.65);line-height:1.7;max-width:480px;margin:0 auto 2rem;position:relative;}
-.hero-value strong{color:#fff;}
-.hero-meta{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;position:relative;}
-.hero-meta-item{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;display:flex;align-items:center;gap:6px;}
-.hero-meta-item span{color:var(--gold-light);}
-.btn-gold{display:inline-block;padding:1rem 2.75rem;background:var(--gold);color:var(--dark);font-family:'Helvetica Neue',sans-serif;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;text-decoration:none;transition:background 0.2s;position:relative;}
+.hero-value{font-family:'Helvetica Neue',sans-serif;font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:480px;margin:0 auto 2rem;position:relative;}
+.hero-value strong{color:rgba(255,255,255,0.85);font-weight:400;}
+.hero-divider{width:40px;height:1px;background:var(--gold);margin:0 auto 2rem;position:relative;opacity:0.6;}
+.hero-meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;position:relative;}
+.hero-meta-item{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.38);letter-spacing:0.12em;display:flex;align-items:center;gap:6px;}
+.hero-meta-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:0.6;}
+.btn-gold{display:inline-block;padding:1rem 3rem;background:var(--gold);color:var(--dark);font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:background 0.2s;position:relative;}
 .btn-gold:hover{background:var(--gold-light);}
-.hero-sub-cta{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:0.9rem;position:relative;}
+.hero-sub-note{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:1rem;letter-spacing:0.1em;position:relative;}
 
 /* ── STICKY CTA MOBILE ── */
-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--gold);padding:1rem;text-align:center;}
-.sticky-cta a{font-family:'Helvetica Neue',sans-serif;font-size:0.82rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;color:var(--dark);text-decoration:none;}
-@media(max-width:640px){.sticky-cta{display:block;}.hero{padding-bottom:6rem;}}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--gold);padding:0.9rem;text-align:center;}
+.sticky-cta a{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;color:var(--dark);text-decoration:none;}
+@media(max-width:640px){.sticky-cta{display:block;}.hero{padding-bottom:7rem;}}
+
+/* ── WAVE DIVIDER ── */
+.wave-top{display:block;width:100%;margin-bottom:-2px;}
+.wave-bottom{display:block;width:100%;margin-top:-2px;}
 
 /* ── VIDEO ── */
-.video-section{background:var(--dark);padding:3.5rem 1.5rem;}
-.section-label{font-family:'Helvetica Neue',sans-serif;font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--purple);text-align:center;margin-bottom:0.6rem;}
-.section-label-gold{color:var(--gold);}
-.video-thumb{max-width:320px;margin:1.5rem auto 0;display:block;position:relative;cursor:pointer;border-radius:8px;overflow:hidden;}
-.video-thumb img{width:100%;display:block;filter:brightness(0.7);}
-.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:rgba(201,162,39,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.video-section{background:var(--dark);padding:4rem 2rem;}
+.video-label{font-family:'Helvetica Neue',sans-serif;font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:0.6rem;}
+.video-subtitle{font-family:Georgia,serif;font-size:1.3rem;color:rgba(255,255,255,0.7);text-align:center;margin-bottom:1.75rem;font-style:italic;}
+.video-thumb{max-width:340px;margin:0 auto;display:block;position:relative;cursor:pointer;overflow:hidden;}
+.video-thumb img{width:100%;display:block;filter:brightness(0.65) saturate(0.4);}
+.video-overlay{position:absolute;inset:0;background:rgba(155,138,160,0.2);}
+.play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border:1.5px solid rgba(201,162,39,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.video-thumb:hover .play-btn{background:rgba(201,162,39,0.2);}
 
 /* ── SECTIONS ── */
-section{padding:4rem 1.5rem;}
-.section-inner{max-width:840px;margin:0 auto;}
-.section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:400;text-align:center;margin-bottom:1.25rem;line-height:1.2;}
-.section-body{font-size:1rem;line-height:1.9;color:var(--text-mid);text-align:center;max-width:600px;margin:0 auto;}
-.divider{width:40px;height:1px;background:var(--gold);margin:1.25rem auto;}
+section{padding:5rem 2rem;}
+.section-inner{max-width:860px;margin:0 auto;}
+.section-label{font-family:'Helvetica Neue',sans-serif;font-size:0.64rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--purple);text-align:center;margin-bottom:0.6rem;}
+.section-label-gold{color:var(--gold);}
+.section-title{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:400;text-align:center;line-height:1.2;margin-bottom:1.25rem;}
+.section-body{font-size:1.02rem;line-height:1.9;color:var(--text-mid);text-align:center;max-width:600px;margin:0 auto;}
+.divider{width:40px;height:1px;background:var(--gold);margin:1.25rem auto;opacity:0.7;}
 .divider-purple{width:40px;height:1px;background:var(--purple-light);margin:1.25rem auto;}
 
-/* ── BENEFÍCIOS (sobre) ── */
-.sobre-bg{background:var(--cream);}
-.benefits-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2.5rem;}
-.benefit-card{background:#fff;border:1px solid var(--warm);padding:1.5rem 1.25rem;text-align:center;}
-.benefit-icon{font-size:1.5rem;margin-bottom:0.75rem;}
-.benefit-title{font-family:'Helvetica Neue',sans-serif;font-size:0.82rem;font-weight:600;color:var(--dark);margin-bottom:0.4rem;letter-spacing:0.05em;}
-.benefit-body{font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;color:var(--text-mid);line-height:1.6;}
+/* ── QUOTE BLOCK (elemento do site pai) ── */
+.quote-block{background:var(--dark);padding:5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+.quote-sphere{position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(155,138,160,0.08);}
+.quote-sphere2{position:absolute;left:-40px;bottom:-40px;width:160px;height:160px;border-radius:50%;background:rgba(201,162,39,0.06);}
+.quote-mark{font-family:Georgia,serif;font-size:5rem;color:rgba(201,162,39,0.2);line-height:0.8;display:block;margin-bottom:1rem;}
+.quote-text{font-family:Georgia,serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:400;font-style:italic;color:rgba(255,255,255,0.75);max-width:680px;margin:0 auto;line-height:1.6;position:relative;}
+.quote-text em{color:var(--gold-light);font-style:normal;}
+
+/* ── SOBRE / BENEFITS ── */
+.sobre-bg{background:var(--cream);position:relative;}
+.benefits-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.5rem;margin-top:2.5rem;}
+.benefit-card{background:#fff;border:0.5px solid rgba(155,138,160,0.2);padding:1.75rem 1.25rem;text-align:center;position:relative;}
+.benefit-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:30px;height:2px;background:var(--gold);}
+.benefit-icon-wrap{width:44px;height:44px;border-radius:50%;background:var(--purple-pale);margin:0.75rem auto 1rem;display:flex;align-items:center;justify-content:center;}
+.benefit-icon-wrap svg{width:20px;height:20px;}
+.benefit-title{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;font-weight:600;color:var(--dark);margin-bottom:0.4rem;letter-spacing:0.04em;}
+.benefit-body{font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;color:var(--text-mid);line-height:1.65;}
 
 /* ── SCHEDULE ── */
-.schedule-bg{background:var(--dark);}
+.schedule-bg{background:var(--dark);position:relative;overflow:hidden;}
+.schedule-deco{position:absolute;right:-100px;bottom:-100px;width:300px;height:300px;border-radius:50%;background:rgba(155,138,160,0.06);}
 .schedule-bg .section-title{color:#fff;}
-.schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:2rem;background:rgba(255,255,255,0.07);}
+.schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:2rem;background:rgba(255,255,255,0.06);}
 @media(max-width:500px){.schedule-grid{grid-template-columns:1fr;}}
-.schedule-card{background:var(--dark);padding:1.75rem 1rem;text-align:center;}
-.schedule-day{font-family:'Helvetica Neue',sans-serif;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple-light);margin-bottom:0.6rem;}
-.schedule-time{font-size:1.3rem;color:var(--gold-light);}
+.schedule-card{background:var(--dark);padding:2rem 1rem;text-align:center;}
+.schedule-day{font-family:'Helvetica Neue',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple-light);margin-bottom:0.75rem;}
+.schedule-time{font-family:Georgia,serif;font-size:1.4rem;color:var(--gold-light);}
+.schedule-note{font-family:'Helvetica Neue',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.3);margin-top:2rem;text-align:center;line-height:1.75;}
 
 /* ── INCLUDES ── */
 .includes-bg{background:var(--purple-pale);}
-.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:2rem;}
-.include-item{padding:1.5rem;border-top:1px solid var(--purple-light);}
-.include-num{font-family:'Helvetica Neue',sans-serif;font-size:0.65rem;letter-spacing:0.2em;color:var(--gold);margin-bottom:0.4rem;}
-.include-title{font-size:0.92rem;margin-bottom:0.35rem;color:var(--dark);}
-.include-body{font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;color:var(--text-mid);line-height:1.6;}
+.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2rem;}
+.include-item{padding:1.75rem 1.5rem;border-top:1px solid rgba(155,138,160,0.25);}
+.include-num{font-family:'Helvetica Neue',sans-serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--gold);margin-bottom:0.5rem;display:block;}
+.include-title{font-size:0.93rem;margin-bottom:0.35rem;color:var(--dark);}
+.include-body{font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;color:var(--text-mid);line-height:1.65;}
 
 /* ── DEPOIMENTOS ── */
 .depoi-bg{background:#fff;}
-.depoi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem;}
-.depoi-card{background:var(--cream);border-left:3px solid var(--gold);padding:1.5rem 1.25rem;}
-.depoi-text{font-size:0.95rem;line-height:1.8;color:var(--text-mid);margin-bottom:1rem;font-style:italic;}
-.depoi-author{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);}
+.depoi-under-construction{border:1px dashed rgba(155,138,160,0.3);padding:2.5rem;text-align:center;max-width:400px;margin:2rem auto 0;}
+.depoi-under-construction p{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-light);}
 
 /* ── PRÉ-CTA ── */
-.precta-bg{background:var(--dark);}
+.precta-bg{background:var(--dark);position:relative;overflow:hidden;}
+.precta-sphere{position:absolute;left:-80px;top:50%;transform:translateY(-50%);width:240px;height:240px;border-radius:50%;background:rgba(155,138,160,0.07);}
 .precta-bg .section-title{color:#fff;}
-.precta-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0;}
-.precta-item{text-align:center;padding:1rem;}
-.precta-num{font-size:1.8rem;color:var(--gold-light);font-family:Georgia,serif;display:block;}
-.precta-label{font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);display:block;margin-top:0.25rem;}
-.cta-block{text-align:center;padding-top:1rem;}
-.cta-note{font-family:'Helvetica Neue',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.75rem;}
+.precta-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:2.5rem 0;}
+.precta-item{text-align:center;padding:1.25rem;}
+.precta-num{font-family:Georgia,serif;font-size:2.2rem;color:var(--gold-light);display:block;line-height:1;}
+.precta-label{font-family:'Helvetica Neue',sans-serif;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.38);display:block;margin-top:0.4rem;}
+.cta-block{text-align:center;padding-top:0.5rem;}
+.cta-note{font-family:'Helvetica Neue',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.28);margin-top:0.75rem;letter-spacing:0.1em;}
 
 /* ── LEVAR ── */
 .levar-bg{background:var(--warm);}
-.levar-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:1.5rem;}
-.levar-list li{background:var(--cream);padding:0.55rem 1.1rem;font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;color:var(--text-mid);border:1px solid var(--purple-light);}
+.levar-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:1.75rem;}
+.levar-list li{background:var(--cream);padding:0.55rem 1.2rem;font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;color:var(--text-mid);border:0.5px solid rgba(155,138,160,0.3);}
 
 /* ── CONTATO ── */
 .contato-bg{background:var(--dark);}
 .contato-bg .section-title{color:#fff;}
-.contato-flex{display:flex;flex-wrap:wrap;justify-content:center;gap:3rem;margin-top:1.75rem;}
-.contato-name{font-family:'Helvetica Neue',sans-serif;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple-light);margin-bottom:0.4rem;}
-.contato-phone a{font-size:1.2rem;color:#fff;text-decoration:none;font-family:Georgia,serif;transition:color 0.2s;}
+.contato-flex{display:flex;flex-wrap:wrap;justify-content:center;gap:3.5rem;margin-top:2rem;}
+.contato-name{font-family:'Helvetica Neue',sans-serif;font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--purple-light);margin-bottom:0.5rem;}
+.contato-phone a{font-family:Georgia,serif;font-size:1.2rem;color:#fff;text-decoration:none;transition:color 0.2s;}
 .contato-phone a:hover{color:var(--gold-light);}
 
 /* ── FOOTER ── */
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);padding:2rem 1.5rem;text-align:center;}
-.footer-logo{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:0.75rem;}
-.footer-logo svg{width:26px;height:26px;}
-.footer-logo-text{font-family:'Helvetica Neue',sans-serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple-light);}
-footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.25);letter-spacing:0.08em;}
+footer{background:var(--dark);border-top:1px solid rgba(155,138,160,0.12);padding:2.5rem 2rem;text-align:center;}
+.footer-inner{max-width:600px;margin:0 auto;}
+.footer-divider{width:30px;height:1px;background:rgba(201,162,39,0.3);margin:1rem auto;}
+footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.2);letter-spacing:0.1em;margin-top:0.5rem;}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">
-    <svg viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="55" r="38" fill="#9b8aa0" opacity="0.9"/>
-      <path d="M50 17 Q80 35 65 65 Q50 90 30 70 Q10 50 30 30 Q40 18 50 17Z" fill="#1a1a1a" opacity="0.5"/>
-      <path d="M50 17 Q80 35 65 65" stroke="#1a1a1a" stroke-width="4" fill="none"/>
-      <polygon points="62,10 64,16 70,16 65,20 67,26 62,22 57,26 59,20 54,16 60,16" fill="#9b8aa0" transform="translate(-2,-2) scale(0.85)"/>
+  <a href="https://www.thebrightpath.com/pt/" target="_blank" class="tbp-logo">
+    <svg viewBox="0 0 100 110" fill="none" width="30" height="30">
+      <ellipse cx="52" cy="68" rx="42" ry="44" fill="#9b8aa0"/>
+      <path d="M52 24 Q88 38 80 70 Q72 102 46 94 Q18 84 24 56 Q30 32 52 24Z" fill="#1a1714" opacity="0.5"/>
+      <path d="M52 24 Q88 38 80 70 Q72 102 46 94" stroke="#1a1714" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <polygon points="62,5 65,14 74,14 67,20 70,29 62,23 54,29 57,20 50,14 59,14" fill="#9b8aa0"/>
     </svg>
-    <span class="nav-logo-text">The Bright Path</span>
-  </div>
+    <span class="tbp-logo-text">The Bright Path</span>
+  </a>
   <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfKDwWgMQgpHFr8D4i_u4fMx9Unq5y_HpOKRRv45ImVsAdRyw/viewform?usp=header" target="_blank">Inscrever-se</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-circle"></div>
-  <div class="urgency-badge">📅 10 a 12 de abril · Brasília</div>
+  <div class="hero-sphere"></div>
+  <div class="hero-sphere2"></div>
+  <div class="deco-sphere"></div>
+  <div class="deco-sphere2"></div>
+  <div class="urgency-badge">
+    <span style="width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;"></span>
+    10 a 12 de abril · Brasília
+  </div>
   <h1>Aprenda a meditar<br>de verdade —<br><em>em um fim de semana</em></h1>
-  <p class="hero-value">
-    Uma técnica simples, comprovada e sem religião.<br>
-    <strong>4 técnicas práticas.</strong> Resultado desde o primeiro dia.
-  </p>
+  <p class="hero-value">Uma técnica simples, comprovada e sem religião.<br><strong>4 técnicas práticas.</strong> Resultado desde o primeiro dia.</p>
+  <div class="hero-divider"></div>
   <div class="hero-meta">
-    <div class="hero-meta-item"><span>✦</span> Sexta, Sáb e Dom</div>
-    <div class="hero-meta-item"><span>✦</span> Presencial em Brasília</div>
-    <div class="hero-meta-item"><span>✦</span> The Bright Path</div>
+    <div class="hero-meta-item"><div class="hero-meta-dot"></div>Sexta, Sábado e Domingo</div>
+    <div class="hero-meta-item"><div class="hero-meta-dot"></div>Presencial em Brasília</div>
+    <div class="hero-meta-item"><div class="hero-meta-dot"></div>The Bright Path</div>
   </div>
   <a class="btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSfKDwWgMQgpHFr8D4i_u4fMx9Unq5y_HpOKRRv45ImVsAdRyw/viewform?usp=header" target="_blank">Quero me inscrever</a>
-  <p class="hero-sub-cta">Vagas limitadas · Confirme sua participação</p>
+  <p class="hero-sub-note">Vagas limitadas · Confirme sua participação</p>
 </section>
 
-<!-- STICKY CTA MOBILE -->
+<!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKDwWgMQgpHFr8D4i_u4fMx9Unq5y_HpOKRRv45ImVsAdRyw/viewform?usp=header" target="_blank">Quero me inscrever →</a>
 </div>
 
 <!-- VIDEO -->
-<section class="video-section">
-  <p class="section-label section-label-gold">Conheça o curso</p>
+<section class="video-section" id="video">
+  <p class="video-label">Conheça o curso</p>
+  <p class="video-subtitle">Uma palavra do professor</p>
   <div class="video-thumb" onclick="window.open('https://youtube.com/shorts/_m01H-evuZ0','_blank')">
     <img src="https://img.youtube.com/vi/_m01H-evuZ0/hqdefault.jpg" alt="Vídeo Meditação Ishaya">
+    <div class="video-overlay"></div>
     <div class="play-btn">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#c9a227"><polygon points="8,5 19,12 8,19"/></svg>
     </div>
   </div>
 </section>
 
-<!-- SOBRE / BENEFÍCIOS -->
+<!-- QUOTE BLOCK — elemento editorial do site pai -->
+<div class="quote-block">
+  <div class="quote-sphere"></div>
+  <div class="quote-sphere2"></div>
+  <span class="quote-mark">"</span>
+  <p class="quote-text">Você não precisa mudar quem você é.<br>Só precisa <em>descobrir quem você já é.</em></p>
+</div>
+
+<!-- SOBRE -->
 <section class="sobre-bg" id="sobre">
   <div class="section-inner">
-    <p class="section-label">Por que essa meditação?</p>
-    <h2 class="section-title">Sem crença. Sem complicação.<br>Só resultado.</h2>
+    <p class="section-label">A meditação Ishaya</p>
+    <h2 class="section-title">Simples. Eficiente.<br>Surpreendente.</h2>
     <div class="divider"></div>
-    <p class="section-body">Você não precisa acreditar em nada, mudar sua religião ou ter experiência anterior. Só precisa praticar — e o resultado vem. É bem surpreendente. E bem simples.</p>
+    <p class="section-body">Você não precisa acreditar em nada — não envolve religião ou qualquer tipo de crença, mas não rechaça a sua. Só precisa praticar, e o resultado vem.</p>
     <div class="benefits-row">
       <div class="benefit-card">
-        <div class="benefit-icon">🧘</div>
+        <div class="benefit-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9b8aa0" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
         <div class="benefit-title">4 técnicas práticas</div>
         <div class="benefit-body">1 na sexta, 2 no sábado, 1 no domingo. Você aprende e já pratica.</div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🌍</div>
+        <div class="benefit-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9b8aa0" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/></svg>
+        </div>
         <div class="benefit-title">Válido no mundo todo</div>
-        <div class="benefit-body">Refaça o curso gratuitamente na Inglaterra, México, EUA, Argentina e mais.</div>
+        <div class="benefit-body">Refaça gratuitamente na Inglaterra, México, EUA, Argentina e mais.</div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">👥</div>
+        <div class="benefit-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9b8aa0" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <div class="benefit-title">Suporte contínuo</div>
         <div class="benefit-body">8 semanas de acompanhamento semanal por Zoom após o curso.</div>
       </div>
       <div class="benefit-card">
-        <div class="benefit-icon">🔓</div>
+        <div class="benefit-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9b8aa0" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
         <div class="benefit-title">Sem religião</div>
-        <div class="benefit-body">Não envolve crenças. Funciona para qualquer pessoa, de qualquer contexto.</div>
+        <div class="benefit-body">Funciona para qualquer pessoa, de qualquer contexto ou crença.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HORÁRIOS -->
+<!-- SCHEDULE -->
 <section class="schedule-bg" id="horarios">
+  <div class="schedule-deco"></div>
   <div class="section-inner">
     <p class="section-label section-label-gold">Programação</p>
     <h2 class="section-title">10 a 12 de abril de 2026</h2>
     <div class="schedule-grid">
       <div class="schedule-card">
-        <p class="schedule-day">Sexta · 10 abr</p>
+        <p class="schedule-day">Sexta-feira · 10 abr</p>
         <p class="schedule-time">19h30 – 22h30</p>
       </div>
       <div class="schedule-card">
@@ -231,44 +281,44 @@ footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(25
         <p class="schedule-time">10h00 – 17h00</p>
       </div>
     </div>
-    <p style="font-family:'Helvetica Neue',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:2rem;text-align:center;line-height:1.7;">Mesa de apoio com frutas, nuts e chá inclusa · Traga roupa confortável e caderno</p>
+    <p class="schedule-note">Mesa de apoio com frutas, nuts e chá inclusa · Traga roupa confortável e caderno</p>
   </div>
 </section>
 
-<!-- INCLUSO -->
+<!-- INCLUDES -->
 <section class="includes-bg" id="incluso">
   <div class="section-inner">
-    <p class="section-label">Tudo incluso no curso</p>
+    <p class="section-label">Tudo incluso</p>
     <h2 class="section-title">Muito mais do que um fim de semana</h2>
     <div class="divider-purple"></div>
     <div class="includes-grid">
       <div class="include-item">
-        <p class="include-num">01</p>
+        <span class="include-num">01</span>
         <p class="include-title">Acompanhamento por 8 semanas</p>
         <p class="include-body">Zoom semanal com professor para consolidar a prática.</p>
       </div>
       <div class="include-item">
-        <p class="include-num">02</p>
+        <span class="include-num">02</span>
         <p class="include-title">Curso vitalício gratuito</p>
         <p class="include-body">Repita onde quiser no mundo, para sempre, sem custo.</p>
       </div>
       <div class="include-item">
-        <p class="include-num">03</p>
+        <span class="include-num">03</span>
         <p class="include-title">Grupo semanal online</p>
         <p class="include-body">Medite em grupo e receba orientação dos professores.</p>
       </div>
       <div class="include-item">
-        <p class="include-num">04</p>
+        <span class="include-num">04</span>
         <p class="include-title">Suporte global</p>
         <p class="include-body">Professores do Brasil e do mundo, gratuitamente, sempre.</p>
       </div>
       <div class="include-item">
-        <p class="include-num">05</p>
+        <span class="include-num">05</span>
         <p class="include-title">Acesso a retiros</p>
         <p class="include-body">Retiros e imersões exclusivos para alunos formados.</p>
       </div>
       <div class="include-item">
-        <p class="include-num">06</p>
+        <span class="include-num">06</span>
         <p class="include-title">Biblioteca online</p>
         <p class="include-body">Palestras e webinars de professores do mundo todo.</p>
       </div>
@@ -276,21 +326,29 @@ footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(25
   </div>
 </section>
 
+<!-- SECOND QUOTE -->
+<div class="quote-block">
+  <div class="quote-sphere"></div>
+  <span class="quote-mark">"</span>
+  <p class="quote-text">A meditação não é uma fuga da vida —<br>é o caminho de volta para <em>você mesmo.</em></p>
+</div>
+
 <!-- DEPOIMENTOS -->
 <section class="depoi-bg" id="depoimentos">
   <div class="section-inner">
     <p class="section-label">Quem já fez</p>
     <h2 class="section-title">O que dizem os alunos</h2>
     <div class="divider"></div>
-    <div style="text-align:center;padding:2.5rem 1rem;border:1px dashed var(--warm);">
-      <p style="font-family:'Helvetica Neue',sans-serif;font-size:0.8rem;color:var(--text-light);letter-spacing:0.15em;text-transform:uppercase;">Em construção</p>
-      <p style="font-family:'Helvetica Neue',sans-serif;font-size:0.82rem;color:var(--text-light);margin-top:0.5rem;">Os depoimentos serão adicionados em breve.</p>
+    <div class="depoi-under-construction">
+      <p>Em construção</p>
+      <p style="text-transform:none;letter-spacing:0;font-size:0.78rem;margin-top:0.4rem;color:var(--text-light);">Os depoimentos serão adicionados em breve.</p>
     </div>
   </div>
 </section>
 
 <!-- PRÉ-CTA -->
 <section class="precta-bg" id="inscricao">
+  <div class="precta-sphere"></div>
   <div class="section-inner">
     <p class="section-label section-label-gold">Resumo</p>
     <h2 class="section-title">Tudo que você recebe</h2>
@@ -305,7 +363,7 @@ footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(25
       </div>
       <div class="precta-item">
         <span class="precta-num">∞</span>
-        <span class="precta-label">Acesso vitalício ao curso</span>
+        <span class="precta-label">Acesso vitalício</span>
       </div>
     </div>
     <div class="cta-block">
@@ -315,7 +373,7 @@ footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(25
   </div>
 </section>
 
-<!-- O QUE TRAZER -->
+<!-- LEVAR -->
 <section class="levar-bg">
   <div class="section-inner">
     <p class="section-label">Prepare-se</p>
@@ -348,17 +406,21 @@ footer p{font-family:'Helvetica Neue',sans-serif;font-size:0.68rem;color:rgba(25
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <svg viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="55" r="38" fill="#9b8aa0" opacity="0.7"/>
-      <path d="M50 17 Q80 35 65 65 Q50 90 30 70 Q10 50 30 30 Q40 18 50 17Z" fill="#1a1a1a" opacity="0.5"/>
-      <path d="M50 17 Q80 35 65 65" stroke="#1a1a1a" stroke-width="4" fill="none"/>
-      <polygon points="62,10 64,16 70,16 65,20 67,26 62,22 57,26 59,20 54,16 60,16" fill="#9b8aa0" transform="translate(-2,-2) scale(0.85)"/>
-    </svg>
-    <span class="footer-logo-text">The Bright Path</span>
+  <div class="footer-inner">
+    <a href="https://www.thebrightpath.com/pt/" target="_blank" class="tbp-logo" style="justify-content:center;">
+      <svg viewBox="0 0 100 110" fill="none" width="28" height="28">
+        <ellipse cx="52" cy="68" rx="42" ry="44" fill="#9b8aa0" opacity="0.7"/>
+        <path d="M52 24 Q88 38 80 70 Q72 102 46 94 Q18 84 24 56 Q30 32 52 24Z" fill="#1a1714" opacity="0.5"/>
+        <path d="M52 24 Q88 38 80 70 Q72 102 46 94" stroke="#1a1714" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <polygon points="62,5 65,14 74,14 67,20 70,29 62,23 54,29 57,20 50,14 59,14" fill="#9b8aa0"/>
+      </svg>
+      <span class="tbp-logo-text">The Bright Path</span>
+    </a>
+    <div class="footer-divider"></div>
+    <p>Meditação Ishaya · Brasília · 2026</p>
   </div>
-  <p>Meditação Ishaya · Brasília · 2026</p>
 </footer>
 
 </body>
